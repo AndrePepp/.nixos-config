@@ -1,4 +1,3 @@
-
 set -e  # Exit if anything fails
 
 echo "Copying /etc/nixos → ~/.nixos-config..."
