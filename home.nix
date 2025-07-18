@@ -70,8 +70,9 @@
       shellAliases = {
         ll = "ls -la";
         l = "ls -l";
-        rebuild = "/nixos-backup/nixos-backup-rebuild.sh";
-        update = "/nixos-backup/nixos-backup-update.sh";
+	# If there is no permission make the scripts executables (chmod +x)
+        rebuild = "./nixos-backup/nixos-backup-rebuild.sh";
+        update = "./nixos-backup/nixos-backup-update.sh";
       };
     };
 
