@@ -33,7 +33,6 @@
     lolcat
     fastfetch
     cava
-    cavalier
 
     #Misc
     mangohud
