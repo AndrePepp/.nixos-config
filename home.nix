@@ -1,0 +1,111 @@
+# User-level configuration (home.nix)
+{ config, pkgs, inputs, ... }:
+
+{
+  home.username = "andre";
+  home.homeDirectory = "/home/andre";
+
+  # User packages
+  home.packages = with pkgs; [
+    # Development
+    nixd
+    alejandra
+    android-studio
+    android-tools
+    libgcc
+
+    # Applications
+    vivaldi
+    discord
+    kitty
+    kitty-img
+    kitty-themes
+    alacritty
+    alacritty-theme
+    wineWowPackages.stableFull
+    kdePackages.kate
+    lutris
+    bottles
+
+    # Fun
+    sl
+    neo-cowsay
+    lolcat
+    fastfetch
+    cava
+    cavalier
+
+    #Misc
+    mangohud
+    protonup
+    btop
+
+  ];
+
+  # ProtonUp
+  home.sessionVariables = {
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS = 
+       "\${HOME}/.steam/root/compatibilitytools.d";
+  };
+
+  # Program configurations
+  programs = {
+
+    # Git
+    git = {
+      enable = true;
+      userName = "Andre";
+      userEmail = "ytdragonby@gmail.com";
+
+      extraConfig = {
+        init.defaultBranch = "main";
+        pull.rebase = false;
+      };
+    };
+
+    # Shell
+    bash = {
+      enable = true;
+      enableCompletion = true;
+
+      shellAliases = {
+        ll = "ls -la";
+        l = "ls -l";
+        rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#seven";
+        update = "cd /etc/nixos & sudo nix flake update";
+      };
+    };
+
+
+
+    # File manager
+    direnv = {
+      enable = true;
+      enableBashIntegration = true;
+      nix-direnv.enable = true;
+    };
+  };
+
+  # Dotfiles and configuration files
+  home.file = {
+    # Example: custom dotfile
+    # ".config/example/config.yml".text = ''
+    #   setting: value
+    # '';
+  };
+
+  # Environment variables
+  home.sessionVariables = {
+    BROWSER = "vivaldi";
+    TERMINAL = "alacritty";
+  };
+
+
+
+  # Let Home Manager install and manage itself
+  programs.home-manager.enable = true;
+
+  # This value determines the Home Manager release that your
+  # configuration is compatible with.
+  home.stateVersion = "25.05";
+}
