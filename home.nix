@@ -70,8 +70,8 @@
       shellAliases = {
         ll = "ls -la";
         l = "ls -l";
-        rebuild = "./nixos-backup-rebuild.sh";
-        update = "cd /etc/nixos & sudo nix flake update";
+        rebuild = "/nixos-backup/nixos-backup-rebuild.sh";
+        update = "/nixos-backup/nixos-backup-update.sh";
       };
     };
 
