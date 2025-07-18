@@ -71,7 +71,7 @@
       shellAliases = {
         ll = "ls -la";
         l = "ls -l";
-        rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#seven";
+        rebuild = "./nixos-backup-rebuild.sh";
         update = "cd /etc/nixos & sudo nix flake update";
       };
     };
