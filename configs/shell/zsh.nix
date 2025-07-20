@@ -7,8 +7,8 @@
 	 enableAutosuggestions = true;
 	 enableCompletion = true;
 	 enableLsColors = true;
-	 autoCd = true;
-	 dotDir = ".config/zsh";
+#	 autoCd = true;
+#	 dotDir = ".config/zsh";
 
 	 shellInit = "fastfetch";
 
