@@ -32,10 +32,10 @@
 	 shellAliases = {
 
 	  #shell scrips that save the configs
-	  rebuild = "./nixos-backup/nixos-backup-rebuild.sh";
-	  update = "./nixos-backup/nixos-backup-update.sh";
+	  rebuild = "cdn & ./nixos-backup/nixos-backup-rebuild.sh";
+	  update = "cdn & ./nixos-backup/nixos-backup-update.sh";
 	  frebuild = "sudo nixos-rebuild switch --flake /etc/nixos#seven";
-	  
+	  gitsync = "cdn & ./nixos-backup/nixos-backup.sh"; 
 
 	  l = "ls -l";
 
