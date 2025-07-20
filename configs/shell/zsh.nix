@@ -43,11 +43,11 @@
 	  cdn = "cd /etc/nixos";
 	 };
 
-	 ohMyZsh = {
-
-	  enable = true;
-
-	 };
+#	 ohMyZsh = {
+#
+#	  enable = true;
+#
+#	 };
 
 	};
 }
