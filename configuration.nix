@@ -92,6 +92,7 @@
 
   # Define a user account. Don't forget to set a password with 'passwd'.
   users.users.andre = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     description = "Andre";
     extraGroups = [ "networkmanager" "wheel" ];
