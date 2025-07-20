@@ -10,7 +10,7 @@
 #	 autoCd = true;
 #	 dotDir = ".config/zsh";
 
-	 shellInit = "fastfetch";
+#	 shellInit = "fastfetch";
 
 	 history = {
 
