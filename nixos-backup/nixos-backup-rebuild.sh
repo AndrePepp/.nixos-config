@@ -11,4 +11,4 @@ git commit -m "Backup from /etc/nixos on $(date '+%Y-%m-%d %H:%M:%S')"
 git push
 
 echo "Rebuilding system..."
-sudo nixos-rebuild switch --flake /etc/nixos#seven --impure
+sudo nixos-rebuild switch --flake /etc/nixos#seven 
