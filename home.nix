@@ -42,7 +42,7 @@
   ];
 
   imports = [
-    ./configs/shell/zsh.nix
+    .configs/shell/zsh.nix
   ];
 
   # ProtonUp
