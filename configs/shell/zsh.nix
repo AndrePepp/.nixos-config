@@ -8,7 +8,6 @@
 	 enableCompletion = true;
 	 enableLsColors = true;
 
-	 dotDir = ".config/zsh";
 	 shellInit = "fastfetch";
 
 	 history = {
