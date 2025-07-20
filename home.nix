@@ -41,6 +41,10 @@
 
   ];
 
+  imports = [
+    ./configs/shell/zsh.nix
+  ];
+
   # ProtonUp
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = 
@@ -70,12 +74,10 @@
       shellAliases = {
         ll = "ls -la";
         l = "ls -l";
-	# If there is no permission make the scripts executables (chmod +x)
         rebuild = "./nixos-backup/nixos-backup-rebuild.sh";
         update = "./nixos-backup/nixos-backup-update.sh";
       };
     };
-
 
 
     # File manager
