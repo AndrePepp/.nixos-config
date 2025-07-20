@@ -6,7 +6,7 @@
 	 enable = true;
 	 enableAutosuggestions = true;
 	 enableCompletion = true;
-	 enableLsColors = true;
+#	 enableLsColors = true;
 #	 autoCd = true;
 #	 dotDir = ".config/zsh";
 
