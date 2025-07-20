@@ -21,7 +21,7 @@
 
 	 };
 
-	 initExtra = '' 
+	 initContent = '' 
 
 	  abbrev-alias q = "exit";
 	  abbrev-alias sudon = "sudo -E nvim";
