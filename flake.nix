@@ -23,7 +23,6 @@
         modules = [
           ./configuration.nix
           ./Apps/an-anime-team.nix
-	  ./configs/shell/zsh.nix
 
           # Integrate Home Manager
           home-manager.nixosModules.home-manager

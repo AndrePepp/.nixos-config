@@ -7,12 +7,14 @@
 	 enableAutosuggestions = true;
 	 enableCompletion = true;
 	 enableLsColors = true;
+	 autoCd = true;
+	 dotDir = ".config/zsh";
 
 	 shellInit = "fastfetch";
 
 	 history = {
 
- 	  expireDuplicatesFirst = true;
+	  expireDuplicatesFirst = true;
 	  ignoreSpace = true;
 	  save = 15000;
 	  share = true;

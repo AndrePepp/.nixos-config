@@ -41,6 +41,11 @@
 
   ];
 
+  imports = [
+    ./configs/shell/zsh.nix
+  ];
+
+
   # ProtonUp
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = 
