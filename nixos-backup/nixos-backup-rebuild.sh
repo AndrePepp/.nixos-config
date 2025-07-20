@@ -1,5 +1,9 @@
 set -e  # Exit if anything fails
 
+echo "Adding in git /etc/nixos..."
+cd /etc/nixos || exit 1
+sudo git add .
+
 echo "Copying /etc/nixos → ~/.nixos-config..."
 sudo cp -r /etc/nixos/* ~/.nixos-config/
 
