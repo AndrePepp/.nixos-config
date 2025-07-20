@@ -28,6 +28,7 @@
 	  #shell scrips that save the configs
 	  rebuild = "../../nixos-backup/nixos-backup-rebuild.sh";
 	  update = "../../nixos-backup/nixos-backup-update.sh";
+	  frebuild = "sudo nixos-rebuild switch --flake /etc/nixos#seven";
 	  
 
 	  l = "ls -l";
