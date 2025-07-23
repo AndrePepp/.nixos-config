@@ -4,7 +4,14 @@
 	programs.zsh = {
 
 	 enable = true;
-	 enableAutosuggestions = true;
+
+	 autosuggestion = {
+	   enable = true;
+	 };
+	 
+	 syntaxHighlighting = {
+	   enable = true;
+	 };
 	 enableCompletion = true;
 #	 enableLsColors = true;
 #	 autoCd = true;
@@ -21,17 +28,12 @@
 
 	 };
 
-	 initContent = '' 
-
-	  abbrev-alias q = "exit";
-	  abbrev-alias sudon = "sudo -E nvim";
-	  abbrev-alias v = "nvim";
-
-	 '';
 
 	 shellAliases = {
 
 	  #shell scrips that save the configs
+	  q = "exit";
+	  sudon = "sudo -E nvim";
 	  rebuild = "cdn & ./nixos-backup/nixos-backup-rebuild.sh";
 	  update = "cdn & ./nixos-backup/nixos-backup-update.sh";
 	  frebuild = "sudo nixos-rebuild switch --flake /etc/nixos#seven";

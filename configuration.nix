@@ -131,6 +131,10 @@
       defaultEditor = true;
     };
 
+    java = {
+      enable = true;
+    };
+
   };
 
 

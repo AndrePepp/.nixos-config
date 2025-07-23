@@ -26,7 +26,6 @@
     kdePackages.kate
     lutris
     bottles
-    atlauncher
 
     # Fun
     sl
@@ -79,6 +78,8 @@
         rebuild = "./nixos-backup/nixos-backup-rebuild.sh";
         update = "./nixos-backup/nixos-backup-update.sh";
       };
+
+
     };
 
 
