@@ -26,6 +26,7 @@
     kdePackages.kate
     lutris
     bottles
+    atlauncher
 
     # Fun
     sl

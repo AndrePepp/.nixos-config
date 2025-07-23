@@ -102,6 +102,8 @@
     ];
   };
 
+  home-manager.backupFileExtension = "backup";
+
   virtualisation.docker.enable = true;
 
   services.flatpak.enable = true;
