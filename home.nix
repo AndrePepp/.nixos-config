@@ -13,6 +13,7 @@
     android-studio
     android-tools
     libgcc
+    jdk24
 
     # Applications
     vivaldi
