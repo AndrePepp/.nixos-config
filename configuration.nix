@@ -145,6 +145,27 @@
   environment.systemPackages = with pkgs; [
    vim
    wget
+
+   openjfx21
+   gtk3
+   glib
+   gdk-pixbuf
+   cairo
+   pango
+
+   openjfx21
+   gtk3
+   glib
+   gdk-pixbuf
+   cairo
+   pango
+
+   openjfx21
+   gtk3
+   glib
+   gdk-pixbuf
+   cairo
+   pango
   ];
 
 
