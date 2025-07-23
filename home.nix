@@ -27,6 +27,7 @@
     lutris
     bottles
     prismlauncher
+    lunar-client
 
     # Fun
     sl
