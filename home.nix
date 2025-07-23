@@ -26,6 +26,7 @@
     kdePackages.kate
     lutris
     bottles
+    prismlauncher
 
     # Fun
     sl
