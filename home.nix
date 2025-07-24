@@ -28,13 +28,19 @@
     lutris
     bottles
     prismlauncher
-    lunar-client
 
     # Fun
     sl
     neo-cowsay
     lolcat
     fastfetch
+    nitch
+    cpufetch
+    cmatrix
+    oneko
+    lolcat
+    jp2a
+    cbonsai
     cava
 
     #Misc
