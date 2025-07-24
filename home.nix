@@ -28,6 +28,8 @@
     lutris
     bottles
     prismlauncher
+    qbittorrent
+    ani-cli
 
     # Fun
     sl
