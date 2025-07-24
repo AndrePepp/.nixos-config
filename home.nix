@@ -42,6 +42,7 @@
     jp2a
     cbonsai
     cava
+    astroterm
 
     #Misc
     mangohud
