@@ -25,6 +25,7 @@
     alacritty-theme
     wineWowPackages.stableFull
     kdePackages.kate
+    vlc
     lutris
     bottles
     prismlauncher
