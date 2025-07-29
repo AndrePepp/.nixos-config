@@ -13,9 +13,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    nvf.url = "github:notashelf/nvf";
+
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, nvf, ... }@inputs: {
     nixosConfigurations = {
       seven = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -23,15 +26,20 @@
         modules = [
           ./configuration.nix
           ./Apps/an-anime-team.nix
-
-          # Integrate Home Manager
+	  nvf.nixosModules.default
+	  # Integrate Home Manager
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.andre = import ./home.nix;
+	    home-manager.sharedModules = [
+	      nvf.homeManagerModules.default
+	    ];
             home-manager.extraSpecialArgs = { inherit inputs; };
           }
+
+
         ];
       };
     };

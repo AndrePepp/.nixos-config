@@ -57,7 +57,9 @@
 
   imports = [
     ./configs/shell/zsh.nix
+    ./configs/nvf/default.nix
   ];
+
 
 
   # ProtonUp
@@ -92,6 +94,7 @@
         rebuild = "./nixos-backup/nixos-backup-rebuild.sh";
         update = "./nixos-backup/nixos-backup-update.sh";
       };
+
 
 
     };
