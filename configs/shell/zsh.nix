@@ -40,7 +40,7 @@
 
 	  #shell scrips that save the configs
 	  q = "exit";
-	  sudon = "sudo -E nvim";
+	  test = "cdn & ./nixos-backup/test.sh";
 	  rebuild = "cdn & ./nixos-backup/nixos-backup-rebuild.sh";
 	  update = "cdn & ./nixos-backup/nixos-backup-update.sh";
 	  frebuild = "sudo nixos-rebuild switch --flake /etc/nixos#seven";
@@ -69,6 +69,10 @@
 	  fzf.enableZshIntegration = true;
 	  oh-my-posh.enable = true;
 	  oh-my-posh.enableZshIntegration = true;
+#	  oh-my-posh.useTheme = "darkblood";
 	  oh-my-posh.useTheme = "catppuccin_mocha";
 	};
+
+
+
 }
