@@ -51,6 +51,7 @@
     mangohud
     protonup
     btop
+    fzf
 
   ];
 

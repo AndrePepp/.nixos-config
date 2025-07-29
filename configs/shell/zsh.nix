@@ -12,20 +12,27 @@
 	 syntaxHighlighting = {
 	   enable = true;
 	 };
-	 enableCompletion = true;
-#	 enableLsColors = true;
-#	 autoCd = true;
-#	 dotDir = ".config/zsh";
 
-#	 shellInit = "fastfetch";
+	 enableCompletion = true;
+	 autocd = true;
+
+ 	 enableVteIntegration = true;
+
 
 	 history = {
 
 	  expireDuplicatesFirst = true;
-	  ignoreSpace = true;
+	  ignoreDups = true;
+	  append = true;
 	  save = 15000;
 	  share = true;
 
+	 };
+
+	 historySubstringSearch = {
+	   enable = true;
+	   searchDownKey = "^[[B";
+	   searchUpKey = "^[[A";
 	 };
 
 
@@ -43,13 +50,25 @@
 
 	  # Freq used directories
 	  cdn = "cd /etc/nixos";
+	  cdd = "cd ~/Downloads";
 	 };
 
-#	 ohMyZsh = {
-#
-#	  enable = true;
-#
-#	 };
+	  
+	  prezto = {
 
+	    enable = true;
+	    
+	    editor.dotExpansion = true;
+
+	  };
+
+	};
+	
+	programs = {
+	  dircolors.enableZshIntegration = true;
+	  fzf.enableZshIntegration = true;
+	  oh-my-posh.enable = true;
+	  oh-my-posh.enableZshIntegration = true;
+	  oh-my-posh.useTheme = "catppuccin-mocha"; 
 	};
 }
