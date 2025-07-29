@@ -69,6 +69,6 @@
 	  fzf.enableZshIntegration = true;
 	  oh-my-posh.enable = true;
 	  oh-my-posh.enableZshIntegration = true;
-	  oh-my-posh.useTheme = "catppuccin-mocha"; 
+	  oh-my-posh.useTheme = "catppuccin_mocha";
 	};
 }
