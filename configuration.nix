@@ -142,6 +142,7 @@
   environment.systemPackages = with pkgs; [
     vim
     wget
+    inputs.swww.packages.${pkgs.system}.swww
   ];
 
   fonts.packages = with pkgs; [
