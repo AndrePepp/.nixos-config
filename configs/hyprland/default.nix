@@ -3,7 +3,6 @@
 let 
         startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
                 ${pkgs.waybar}/bin/waybar &
-                ${pkgs.swww}/bin/swww init &
                 ${pkgs.swww}/bin/swww-daemon &
 
                 sleep 1
@@ -63,6 +62,10 @@ bind = [
 "$mod, 3, workspace, 3"
 "$mod, 4, workspace, 4"
 
+"$mod SHIFT, 1, movetoworkspace, 1"
+"$mod SHIFT, 2, movetoworkspace, 2"
+"$mod SHIFT, 3, movetoworkspace, 3"
+"$mod SHIFT, 4, movetoworkspace, 4"
 ];
 
 bindl = [
