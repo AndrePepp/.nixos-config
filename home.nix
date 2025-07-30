@@ -61,6 +61,7 @@
   imports = [
     ./configs/shell/zsh.nix
     ./configs/nvf/default.nix
+    ./configs/hyprland/default.nix
   ];
 
   # ProtonUp
