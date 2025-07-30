@@ -22,9 +22,24 @@ wayland.windowManager.hyprland = {
 settings = {
 exec-once = ''${startupScript}/bin/start''; 
 
+monitor = ", prefered, auto, 1";
+
 "$mod" = "SUPER";
 "$terminal" = "alacritty";
 "$browser" = "vivaldi";
+"$doubleShift" = "SHIFT+SHIFT";
+
+input = {
+"kb_layout" = "us";
+
+"follow_mouse" = 1;
+"repeat_delay" = 250;
+"repeat_rate" = 30;
+
+touchpad = {
+"natural_scroll" = true;
+};
+};
 
 bind = [
 
@@ -32,6 +47,8 @@ bind = [
 "$mod, Q, exec, $terminal"
 "$mod, C, killactive,"
 "$mod, L, exit,"
+"$mod, B, exec, $browser"
+"$mod, P, togglefloating"
 
 #Move focus
 "$mod, left, movefocus, l"
@@ -59,6 +76,12 @@ bindl = [
 
 ];
 
+misc = {
+
+"disable_hyprland_logo" = true;
+"middle_click_paste" = false;
+
+};
 };
 
 };

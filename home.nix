@@ -26,6 +26,7 @@
     kitty-themes
     alacritty
     alacritty-theme
+    brightnessctl
     wineWowPackages.stableFull
     kdePackages.kate
     vlc
