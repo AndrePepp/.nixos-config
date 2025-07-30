@@ -115,6 +115,7 @@
 
     hyprland.enable = true;
     hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+    hyprland.xwayland.enable = true;
 
     steam = {
       enable = true;
