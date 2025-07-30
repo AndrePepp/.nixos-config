@@ -1,14 +1,16 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running 'nixos-help').
-
-{ config, pkgs, inputs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -95,10 +97,10 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "Andre";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -109,7 +111,6 @@
   services.flatpak.enable = true;
 
   programs = {
-
     zsh.enable = true;
 
     hyprland.enable = true;
@@ -118,7 +119,7 @@
     steam = {
       enable = true;
       gamescopeSession.enable = true;
-      extraCompatPackages = [ pkgs.proton-ge-bin ];
+      extraCompatPackages = [pkgs.proton-ge-bin];
     };
 
     gamemode.enable = true;
@@ -131,26 +132,22 @@
       enable = true;
       defaultEditor = true;
     };
-
   };
-
 
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-   vim
-   wget
+    vim
+    wget
   ];
 
   fonts.packages = with pkgs; [
-   nerd-fonts.fira-code
-   nerd-fonts.jetbrains-mono
-   nerd-fonts.hack
-  ]; 
-
-
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.hack
+  ];
 
   # Automatic updates
   system.autoUpgrade.enable = true;
@@ -181,5 +178,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
-
 }

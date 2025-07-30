@@ -1,78 +1,68 @@
-{ config, pkgs, lib, ...}:
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
+  programs.zsh = {
+    enable = true;
 
-	programs.zsh = {
+    autosuggestion = {
+      enable = true;
+    };
 
-	 enable = true;
+    syntaxHighlighting = {
+      enable = true;
+    };
 
-	 autosuggestion = {
-	   enable = true;
-	 };
-	 
-	 syntaxHighlighting = {
-	   enable = true;
-	 };
+    enableCompletion = true;
+    autocd = true;
 
-	 enableCompletion = true;
-	 autocd = true;
+    enableVteIntegration = true;
 
- 	 enableVteIntegration = true;
+    history = {
+      expireDuplicatesFirst = true;
+      ignoreDups = true;
+      append = true;
+      save = 15000;
+      share = true;
+    };
 
+    historySubstringSearch = {
+      enable = true;
+      searchDownKey = "^[[B";
+      searchUpKey = "^[[A";
+    };
 
-	 history = {
+    shellAliases = {
+      #shell scrips that save the configs
+      q = "exit";
+      test = "cdn & ./nixos-backup/test.sh";
+      rebuild = "cdn & ./nixos-backup/nixos-backup-rebuild.sh";
+      update = "cdn & ./nixos-backup/nixos-backup-update.sh";
+      frebuild = "sudo nixos-rebuild switch --flake /etc/nixos#seven";
+      gitsync = "cdn & ./nixos-backup/nixos-backup.sh";
 
-	  expireDuplicatesFirst = true;
-	  ignoreDups = true;
-	  append = true;
-	  save = 15000;
-	  share = true;
+      l = "ls -l";
 
-	 };
+      # Freq used directories
+      cdn = "cd /etc/nixos";
+      cdd = "cd ~/Downloads";
+    };
 
-	 historySubstringSearch = {
-	   enable = true;
-	   searchDownKey = "^[[B";
-	   searchUpKey = "^[[A";
-	 };
+    prezto = {
+      enable = true;
 
+      editor.dotExpansion = true;
+    };
+  };
 
-	 shellAliases = {
-
-	  #shell scrips that save the configs
-	  q = "exit";
-	  test = "cdn & ./nixos-backup/test.sh";
-	  rebuild = "cdn & ./nixos-backup/nixos-backup-rebuild.sh";
-	  update = "cdn & ./nixos-backup/nixos-backup-update.sh";
-	  frebuild = "sudo nixos-rebuild switch --flake /etc/nixos#seven";
-	  gitsync = "cdn & ./nixos-backup/nixos-backup.sh"; 
-
-	  l = "ls -l";
-
-	  # Freq used directories
-	  cdn = "cd /etc/nixos";
-	  cdd = "cd ~/Downloads";
-	 };
-
-	  
-	  prezto = {
-
-	    enable = true;
-	    
-	    editor.dotExpansion = true;
-
-	  };
-
-	};
-	
-	programs = {
-	  dircolors.enableZshIntegration = true;
-	  fzf.enableZshIntegration = true;
-	  oh-my-posh.enable = true;
-	  oh-my-posh.enableZshIntegration = true;
-#	  oh-my-posh.useTheme = "darkblood";
-	  oh-my-posh.useTheme = "catppuccin_mocha";
-	};
-
-
-
+  programs = {
+    dircolors.enableZshIntegration = true;
+    fzf.enableZshIntegration = true;
+    oh-my-posh.enable = true;
+    oh-my-posh.enableZshIntegration = true;
+    #	  oh-my-posh.useTheme = "darkblood";
+    oh-my-posh.useTheme = "catppuccin_mocha";
+  };
 }

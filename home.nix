@@ -1,7 +1,10 @@
 # User-level configuration (home.nix)
-{ config, pkgs, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   home.username = "andre";
   home.homeDirectory = "/home/andre";
 
@@ -53,7 +56,6 @@
     protonup
     btop
     fzf
-
   ];
 
   imports = [
@@ -61,17 +63,13 @@
     ./configs/nvf/default.nix
   ];
 
-
-
   # ProtonUp
   home.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS = 
-       "\${HOME}/.steam/root/compatibilitytools.d";
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\${HOME}/.steam/root/compatibilitytools.d";
   };
 
   # Program configurations
   programs = {
-
     # Git
     git = {
       enable = true;
@@ -97,7 +95,7 @@
       };
     };
 
-    # Alacritty theme 
+    # Alacritty theme
     alacritty.theme = "inferno";
 
     waybar.enable = true;
@@ -124,8 +122,6 @@
     BROWSER = "vivaldi";
     TERMINAL = "alacritty";
   };
-
-
 
   # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
