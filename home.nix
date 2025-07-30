@@ -94,11 +94,10 @@
         rebuild = "./nixos-backup/nixos-backup-rebuild.sh";
         update = "./nixos-backup/nixos-backup-update.sh";
       };
-
-
-
     };
 
+    # Alacritty theme 
+    alacritty.theme = "inferno";
 
     # File manager
     direnv = {
