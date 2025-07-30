@@ -25,7 +25,7 @@ exec-once = ''${startupScript}/bin/start'';
 };
 
 programs = {
-        
+        quickshell.systemd.target = "hyprland-session.target";
         hyprlock.enable = true;
 };
 
