@@ -16,6 +16,17 @@
     
     nvf.url = "github:notashelf/nvf";
 
+    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.nixpkgs.follows = "hyprland";
+    };
+
+    swww = {
+      url = "github:LGFae/swww";
+      inputs.nixpkgs.follows = "nixpkgs";  
+    };
+
   };
 
   outputs = { self, nixpkgs, home-manager, nvf, ... }@inputs: {

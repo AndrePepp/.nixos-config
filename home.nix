@@ -46,6 +46,7 @@
     cbonsai
     cava
     astroterm
+    tplay
 
     #Misc
     mangohud
@@ -98,6 +99,8 @@
 
     # Alacritty theme 
     alacritty.theme = "inferno";
+
+    waybar.enable = true;
 
     # File manager
     direnv = {

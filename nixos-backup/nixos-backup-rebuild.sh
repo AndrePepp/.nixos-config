@@ -14,7 +14,7 @@ cd ~/.nixos-config || exit 1
 
 read -p "Commit description: " desc
 
-if [ -z  "$desc"]; then
+if [ -z  "$desc" ]; then
 	desc="Backup from /etc/nixos on $(date '+%Y-%m-%d %H:%M:%S')"
 fi
 

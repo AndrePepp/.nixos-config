@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running 'nixos-help').
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports =
@@ -113,6 +113,7 @@
     zsh.enable = true;
 
     hyprland.enable = true;
+    hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
     steam = {
       enable = true;
