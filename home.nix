@@ -20,6 +20,7 @@
 
     # Applications
     vivaldi
+    librewolf
     discord
     kitty
     kitty-img
@@ -27,6 +28,7 @@
     alacritty
     alacritty-theme
     brightnessctl
+    playerctl
     wineWowPackages.stableFull
     kdePackages.kate
     vlc
