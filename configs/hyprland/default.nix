@@ -28,14 +28,12 @@ windowrule = "nofocus, class:^$, title:^$, xwayland:1, floating: 1, fullscreen:0
 "$mod" = "SUPER";
 "$terminal" = "alacritty";
 "$browser" = "librewolf";
-"$doubleShift" = "SHIFT+SHIFT";
-"$doubleCtrl" = "CTRL+CTRL";
 
 input = {
 "kb_layout" = "us";
 
 "follow_mouse" = 1;
-"repeat_delay" = 125;
+"repeat_delay" = 135;
 "repeat_rate" = 70;
 
 touchpad = {
@@ -63,8 +61,8 @@ bind = [
 "$mod, 2, workspace, 2"
 "$mod, 3, workspace, 3"
 "$mod, 4, workspace, 4"
-"$doubleShift, , workspace, e-1"
-"$doubleCtrl, , workspace, e+1"
+"SHIFT, , exec, ./doubleTapShift.sh"
+"CTRL, , exec, ./doubleTapCtrl.sh"
 
 "$mod SHIFT, 1, movetoworkspace, 1"
 "$mod SHIFT, 2, movetoworkspace, 2"
@@ -88,6 +86,7 @@ bindl = [
 "  ,XF86AudioPrev, exec, playerctl previous"
 "  ,XF86AudioStop, exec, playerctl stop"
 ];
+
 
 misc = {
 
