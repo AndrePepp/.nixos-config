@@ -9,13 +9,6 @@ let
 
                 ${pkgs.swww}/bin/swww img ${./wallpaper.png} &
                 '';
-        switchShiftScript = pkgs.pkgs.writeShellScriptBin "switchShift" ''
-                ./doubleTapShift.sh  &
-                '';
-        switchCtrlScript = pkgs.pkgs.writeShellScriptBin "switchCtrl" ''
-                ./doubleTapCtrl.sh &
-                '';
-
 in
         {
 
@@ -68,16 +61,14 @@ bind = [
 "$mod, 2, workspace, 2"
 "$mod, 3, workspace, 3"
 "$mod, 4, workspace, 4"
+" ,Shift_L, exec, sh /etc/nixos/configs/hyprland/doubleTapShift.sh"
+" ,Control_L, exec, sh /etc/nixos/configs/hyprland/doubleTapCtrl.sh"
+
 
 "$mod SHIFT, 1, movetoworkspace, 1"
 "$mod SHIFT, 2, movetoworkspace, 2"
 "$mod SHIFT, 3, movetoworkspace, 3"
 "$mod SHIFT, 4, movetoworkspace, 4"
-];
-
-bindr = [
-"SHIFT, , exec, ''${switchShiftScript}/bin/switchShift'' "
-"CTRL, , exec, ''${switchCtrlScript}/bin/switchCtrl'' "
 ];
 
 bindl = [
@@ -95,6 +86,8 @@ bindl = [
 "  ,XF86AudioPlay, exec, playerctl play-pause"
 "  ,XF86AudioPrev, exec, playerctl previous"
 "  ,XF86AudioStop, exec, playerctl stop"
+
+" ,switch:Lid Switch, exec, hyprlock"
 ];
 
 debug = {
