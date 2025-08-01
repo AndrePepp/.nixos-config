@@ -9,6 +9,13 @@ let
 
                 ${pkgs.swww}/bin/swww img ${./wallpaper.png} &
                 '';
+        switchShiftScript = pkgs.pkgs.writeShellScriptBin "switchShift" ''
+                ./doubleTapShift.sh  &
+                '';
+        switchCtrlScript = pkgs.pkgs.writeShellScriptBin "switchCtrl" ''
+                ./doubleTapCtrl.sh &
+                '';
+
 in
         {
 
@@ -61,13 +68,16 @@ bind = [
 "$mod, 2, workspace, 2"
 "$mod, 3, workspace, 3"
 "$mod, 4, workspace, 4"
-"SHIFT, , exec, ./doubleTapShift.sh"
-"CTRL, , exec, ./doubleTapCtrl.sh"
 
 "$mod SHIFT, 1, movetoworkspace, 1"
 "$mod SHIFT, 2, movetoworkspace, 2"
 "$mod SHIFT, 3, movetoworkspace, 3"
 "$mod SHIFT, 4, movetoworkspace, 4"
+];
+
+bindr = [
+"SHIFT, , exec, ''${switchShiftScript}/bin/switchShift'' "
+"CTRL, , exec, ''${switchCtrlScript}/bin/switchCtrl'' "
 ];
 
 bindl = [
@@ -87,6 +97,12 @@ bindl = [
 "  ,XF86AudioStop, exec, playerctl stop"
 ];
 
+debug = {
+overlay = true;
+"disable_logs" = false;
+"disable_time" = false;
+"enable_stdout_logs" = true;
+};
 
 misc = {
 
