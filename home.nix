@@ -29,6 +29,7 @@
     alacritty-theme
     brightnessctl
     playerctl
+    pulseaudio
     wineWowPackages.stableFull
     kdePackages.kate
     vlc
