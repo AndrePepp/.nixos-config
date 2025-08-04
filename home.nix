@@ -39,6 +39,7 @@
     prismlauncher
     qbittorrent
     ani-cli
+    youtube-music
 
     # Fun
     sl
