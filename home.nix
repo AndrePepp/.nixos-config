@@ -3,6 +3,7 @@
   config,
   pkgs,
   inputs,
+  nix-colors,
   ...
 }: {
   home.username = "andre";
@@ -63,6 +64,8 @@
   ];
 
   imports = [
+    nix-colors.homeManagerModules.default 
+
     ./configs/shell/zsh.nix
     ./configs/nvf/default.nix
     ./configs/hyprland/default.nix

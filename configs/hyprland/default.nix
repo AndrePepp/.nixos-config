@@ -25,6 +25,11 @@ exec-once = ''${startupScript}/bin/start'';
 monitor = ", prefered, auto, 1";
 windowrule = "nofocus, class:^$, title:^$, xwayland:1, floating: 1, fullscreen:0, pinned: 0";
 
+#general = with config.colorScheme.colors;  {
+#"col.active_border" = "rgba(${base0E}ff) rgba(${base09}ff) 60deg";
+#"col.inactive_border" = "rgba(${base00}ff)";
+#};
+
 "$mod" = "SUPER";
 "$terminal" = "alacritty";
 "$browser" = "librewolf";
@@ -55,6 +60,8 @@ bind = [
 "$mod, right, movefocus, r"
 "$mod, up, movefocus, u"
 "$mod, down, movefocus, d"
+"ALT, Tab, cyclenext "
+"ALT, Tab, bringactivetotop "
 
 #Switch workplace
 "$mod, 1, workspace, 1"
@@ -64,11 +71,12 @@ bind = [
 " ,Shift_L, exec, sh /etc/nixos/configs/hyprland/doubleTapShift.sh"
 " ,Control_L, exec, sh /etc/nixos/configs/hyprland/doubleTapCtrl.sh"
 
-
+#Moves to a workplace directly
 "$mod SHIFT, 1, movetoworkspace, 1"
 "$mod SHIFT, 2, movetoworkspace, 2"
 "$mod SHIFT, 3, movetoworkspace, 3"
 "$mod SHIFT, 4, movetoworkspace, 4"
+
 ];
 
 bindl = [
@@ -88,6 +96,15 @@ bindl = [
 "  ,XF86AudioStop, exec, playerctl stop"
 
 " ,switch:Lid Switch, exec, hyprlock"
+];
+
+binds =  { 
+"drag_threshold" = 10;
+};
+
+bindm = [
+"$mod, mouse:272, movewindow"
+"$mod, mouse:272, togglefloating"
 ];
 
 debug = {
