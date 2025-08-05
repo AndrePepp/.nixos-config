@@ -30,7 +30,6 @@
     alacritty-theme
     brightnessctl
     playerctl
-    pulseaudio
     wineWowPackages.stableFull
     kdePackages.kate
     vlc
@@ -40,12 +39,12 @@
     qbittorrent
     ani-cli
     youtube-music
+    hyprsysteminfo
 
     # Fun
     sl
     neo-cowsay
     lolcat
-    fastfetch
     nitch
     cpufetch
     cmatrix
@@ -70,6 +69,7 @@
     ./configs/shell/zsh.nix
     ./configs/nvf/default.nix
     ./configs/hyprland/default.nix
+    ./configs/fastfetch/default.nix
   ];
 
   # ProtonUp

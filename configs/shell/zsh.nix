@@ -34,6 +34,11 @@
       searchUpKey = "^[[A";
     };
 
+
+    initContent = ''
+        ${pkgs.fastfetch}/bin/fastfetch
+    '';
+
     shellAliases = {
       #shell scrips that save the configs
       q = "exit";
