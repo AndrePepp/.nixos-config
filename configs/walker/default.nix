@@ -31,8 +31,8 @@ config = {
 	next = ["Down" ]; 
 	previous = ["Up" ];
 	toggle_exact = ["ctrl e"];
-	resume_last_query = ["shift ctrl"];
-	quick_activate = ["F1"];
+	resume_last_query = ["shift ctrl e"];
+	quick_activate = ["Return"];
 	page_down = ["Page_Down"];
 	page_up = ["Page_Up"];
 

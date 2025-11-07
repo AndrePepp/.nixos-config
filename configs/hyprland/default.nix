@@ -2,16 +2,13 @@
 
 let 
         startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
+		elephant &
                 ${pkgs.waybar}/bin/waybar &
                 ${pkgs.swww}/bin/swww-daemon &
 
                 sleep 1
 
                 ${pkgs.swww}/bin/swww img ${./wallpaper.png} &
-
-		sleep 10
-
-		elephant &
                 '';
 in
         {
