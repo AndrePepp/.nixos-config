@@ -32,7 +32,7 @@ config = {
 	previous = ["Up" ];
 	toggle_exact = ["ctrl e"];
 	resume_last_query = ["shift ctrl"];
-	quick_activate = ["Enter"];
+	quick_activate = ["F1"];
 	page_down = ["Page_Down"];
 	page_up = ["Page_Up"];
 
