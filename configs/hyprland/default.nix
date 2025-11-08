@@ -3,6 +3,7 @@
 let 
         startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
 		elephant &
+		hyprdim &
                 ${pkgs.waybar}/bin/waybar &
                 ${inputs.awww.packages.${pkgs.system}.awww}/bin/awww-daemon &
 
@@ -58,7 +59,7 @@ bind = [
 "$mod, P, togglefloating"
 "$mod, SPACE, exec, $search"
 ", DELETE, exec, hyprfreeze -a -t 3000"
-
+"$mod SHIFT, S, exec, ~/.nixos-config/configs/hyprland/Screenshot.sh"
 #Move focus
 "$mod, left, movefocus, l"
 "$mod, right, movefocus, r"

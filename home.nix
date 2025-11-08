@@ -65,6 +65,8 @@
     fzf
     hyprdim
     hyprfreeze
+    grim
+    slurp
   ];
 
   imports = [
@@ -118,6 +120,7 @@
     alacritty.theme = "inferno";
 
     waybar.enable = true;
+    satty.enable = true;
 
     # File manager
     direnv = {
