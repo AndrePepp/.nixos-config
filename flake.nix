@@ -31,10 +31,10 @@
       inputs.elephant.follows = "elephant";
     };
 
-    #swww = {
-    #  url = "github:LGFae/swww";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
+    awww = {
+      url = "git+https://codeberg.org/LGFae/awww";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

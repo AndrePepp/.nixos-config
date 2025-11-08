@@ -40,8 +40,8 @@ input = {
 "kb_layout" = "us";
 
 "follow_mouse" = 1;
-"repeat_delay" = 135;
-"repeat_rate" = 70;
+"repeat_delay" = 145;
+"repeat_rate" = 65;
 
 touchpad = {
 "natural_scroll" = true;

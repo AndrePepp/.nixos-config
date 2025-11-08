@@ -105,7 +105,7 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "7xTe";
-    hashedPassword = "$y$j9T$pvC8i2xuc/1n3AWwtucIB.$sFOdTbzM49RCVwzXqA0f4OciBlItIFLnmopUTobuDx7";
+    hashedPassword = "$y$j9T$GajOvbyrpfZC6nBw6gnex/$JouPO.vbGkWqYSaexxoJr5EwC6dOeCGQ5REqDrvV0q7";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
@@ -121,6 +121,7 @@
   programs = {
     zsh.enable = true;
     java.enable = true;
+    dconf.enable = true;
 
     hyprland.enable = true;
     hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
@@ -153,6 +154,7 @@
   environment.systemPackages = with pkgs; [
     vim 
     wget
+    inputs.awww.packages.${pkgs.system}.awww
   ];
 
   fonts.packages = with pkgs; [

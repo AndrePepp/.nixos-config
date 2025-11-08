@@ -58,6 +58,7 @@
     tplay
 
     #Misc
+    libnotify
     mangohud
     protonup-ng
     btop
@@ -73,6 +74,7 @@
     ./configs/fastfetch/default.nix
     ./configs/walker/default.nix
     ./configs/mako/default.nix
+    ./configs/wob/default.nix
   ];
 
   # ProtonUp
@@ -123,7 +125,12 @@
       nix-direnv.enable = true;
     };
   };
+   
+  services = {
 
+  easyeffects.enable = true;
+
+  };
   # Dotfiles and configuration files
   home.file = {
     # Example: custom dotfile
