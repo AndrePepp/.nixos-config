@@ -57,6 +57,7 @@ bind = [
 "$mod, B, exec, $browser"
 "$mod, P, togglefloating"
 "$mod, SPACE, exec, $search"
+", DELETE, exec, hyprfreeze -a -t 3000"
 
 #Move focus
 "$mod, left, movefocus, l"

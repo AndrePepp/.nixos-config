@@ -63,6 +63,8 @@
     protonup-ng
     btop
     fzf
+    hyprdim
+    hyprfreeze
   ];
 
   imports = [
