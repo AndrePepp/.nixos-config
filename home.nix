@@ -72,6 +72,7 @@
     ./configs/hyprland/default.nix
     ./configs/fastfetch/default.nix
     ./configs/walker/default.nix
+    ./configs/mako/default.nix
   ];
 
   # ProtonUp

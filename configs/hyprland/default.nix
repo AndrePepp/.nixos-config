@@ -71,8 +71,8 @@ bind = [
 "$mod, 2, workspace, 2"
 "$mod, 3, workspace, 3"
 "$mod, 4, workspace, 4"
-" ,Shift_L, exec, sh /etc/nixos/configs/hyprland/doubleTapShift.sh"
-" ,Control_L, exec, sh /etc/nixos/configs/hyprland/doubleTapCtrl.sh"
+" ,Shift_L, exec, sh ~/.nixos-config/configs/hyprland/doubleTapShift.sh"
+" ,Control_L, exec, sh ~/.nixos-config/configs/hyprland/doubleTapCtrl.sh"
 
 #Moves to a workplace directly
 "$mod SHIFT, 1, movetoworkspace, 1"
