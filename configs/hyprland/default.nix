@@ -1,14 +1,14 @@
-{pkgs, lib, config, ...}: 
+{pkgs, lib, config, inputs, ...}: 
 
 let 
         startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
 		elephant &
                 ${pkgs.waybar}/bin/waybar &
-                ${pkgs.swww}/bin/swww-daemon &
+                ${inputs.awww.packages.${pkgs.system}.awww}/bin/awww-daemon &
 
                 sleep 1
 
-                ${pkgs.swww}/bin/swww img ${./wallpaper.png} &
+                ${inputs.awww.packages.${pkgs.system}.awww}/bin/awww img ${./wallpaper.png} &
                 '';
 in
         {
