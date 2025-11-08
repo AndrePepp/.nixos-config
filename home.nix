@@ -134,7 +134,7 @@
   services = {
 
   easyeffects.enable = true;
-
+  cliphist.enable = true;
   };
   # Dotfiles and configuration files
   home.file = {
