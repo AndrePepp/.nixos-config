@@ -5,6 +5,7 @@ let
 		elephant &
 		hyprdim &
                 ${pkgs.waybar}/bin/waybar &
+		hyprctl setcursor Bibata-Modern-Ice 26 &
                 ${inputs.awww.packages.${pkgs.system}.awww}/bin/awww-daemon &
 
                 sleep 1
@@ -13,7 +14,9 @@ let
                 '';
 in
         {
-
+home.packages = with pkgs; [
+bibata-cursors
+];
 wayland.windowManager.hyprland = {
 
         enable = true;

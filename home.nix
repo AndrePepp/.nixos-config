@@ -79,6 +79,7 @@
     ./configs/walker/default.nix
     ./configs/mako/default.nix
     ./configs/wob/default.nix
+    ./configs/waybar/default.nix
   ];
 
   # ProtonUp
@@ -122,6 +123,7 @@
     waybar.enable = true;
     satty.enable = true;
 
+    obs-studio.enable = true;
     # File manager
     direnv = {
       enable = true;
