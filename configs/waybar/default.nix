@@ -12,7 +12,7 @@ settings = [{
     layer = "top";
     position = "top";
     mode = "dock";
-    height = 48;
+    height = 40;
     passthrough = false;
     gtk-layer-shell = true;
     ipc = true;
@@ -25,17 +25,18 @@ settings = [{
       "eDP-1"
       "HDMI-A-1"
     ];
-    modules-left = [ "tray" "sway/workspaces" "sway/mode" "wlr/taskbar" ];
+    modules-left = [ "tray" "hyprland/workspaces" "hyprland/mode" ];
 
-    modules-center = [ "sway/window" "custom/hello-from-waybar" ];
+    modules-center = [ "hyprland/window" ];
 
     modules-right = [ 
-    "mpd"
-    "custom/mymodule#with-css-id"
+    "network"
+    "bluetooth"
+    "pulseaudio"
+    "backlight"
     "temperature"
     "cpu"
     "memory"
-    "network"
     "disk"
     "battery"
     "clock"
@@ -43,22 +44,23 @@ settings = [{
     ];
 
 
-    "sway/workspaces" = {
+    "hyprland/workspaces" = {
       disable-scroll = true;
       all-outputs = true;
+      format = "{icon}";
+      format-icons = {
+      "1" = "";
+      active = "";
+      default = "";
     };
-    "custom/hello-from-waybar" = {
-      format = "hello {}";
-      max-length = 40;
-      interval = "once";
-      exec = pkgs.writeShellScript "hello-from-waybar" ''
-        echo "from within waybar"
-      '';
     };
 
   battery = {
-  format = "{capacity}% {icon} {power}";
-  on-click = "";
+    format = "{icon} {capacity}%";
+    format-charging = "󱐋 {capacity}%";
+    interval = 1;
+    format-icons = ["󰂎" "󰁼" "󰁿" "󰂁" "󰁹"];
+    tooltip = true;
   };
 
 
