@@ -122,6 +122,7 @@
 
     waybar.enable = true;
     satty.enable = true;
+    nnn.enable = true;
 
     obs-studio.enable = true;
     # File manager
@@ -137,6 +138,8 @@
 
   easyeffects.enable = true;
   cliphist.enable = true;
+  copyq.enable = true;
+  udiskie.enable = true;
   };
   # Dotfiles and configuration files
   home.file = {

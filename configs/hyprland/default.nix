@@ -7,6 +7,7 @@ let
                 ${pkgs.waybar}/bin/waybar &
 		hyprctl setcursor Bibata-Modern-Ice 26 &
                 ${inputs.awww.packages.${pkgs.system}.awww}/bin/awww-daemon &
+		udiskie &
 
                 sleep 1
 
@@ -39,6 +40,7 @@ windowrule = "nofocus, class:^$, title:^$, xwayland:1, floating: 1, fullscreen:0
 "$terminal" = "ghostty";
 "$browser" = "vivaldi";
 "$search"  =  "walker";
+"$fileManager" = "nnn";
 
 input = {
 "kb_layout" = "us";
@@ -61,8 +63,10 @@ bind = [
 "$mod, B, exec, $browser"
 "$mod, P, togglefloating"
 "$mod, SPACE, exec, $search"
-", DELETE, exec, hyprfreeze -a -t 3000"
+"$mod, F, exec, $terminal -e $fileManager"
+"SHIFT, DELETE, exec, hyprfreeze -a -t 3000"
 "$mod SHIFT, S, exec, ~/.nixos-config/configs/hyprland/Screenshot.sh"
+", XF86PowerDown, exec, kitty"
 #Move focus
 "$mod, left, movefocus, l"
 "$mod, right, movefocus, r"
