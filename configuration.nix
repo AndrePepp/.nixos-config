@@ -147,7 +147,12 @@
 
 
    # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+  allowUnfree = true;
+  permittedInsecurePackages = [
+    "electron-36.9.5"
+  ];
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget

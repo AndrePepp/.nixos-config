@@ -55,7 +55,7 @@
     cbonsai
     cava
     astroterm
-    tplay
+#    tplay
 
     #Misc
     libnotify
