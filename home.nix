@@ -41,6 +41,7 @@
     ani-cli
     youtube-music
     hyprsysteminfo
+    vscode
 
     # Fun
     sl
@@ -55,6 +56,7 @@
     cbonsai
     cava
     astroterm
+    raylib
 #    tplay
 
     #Misc
@@ -73,7 +75,7 @@
     nix-colors.homeManagerModules.default 
     inputs.walker.homeManagerModules.default
     ./configs/shell/zsh.nix
-    #./configs/nvf/default.nix
+#    ./configs/nvf/default.nix
     ./configs/hyprland/default.nix
     ./configs/fastfetch/default.nix
     ./configs/walker/default.nix
