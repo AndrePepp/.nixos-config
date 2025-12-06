@@ -41,6 +41,7 @@
 
   outputs = {
     self,
+    aagl,
     nixpkgs,
     home-manager,
     nvf,
